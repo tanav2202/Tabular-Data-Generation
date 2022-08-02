@@ -1,6 +1,10 @@
 # TBGAN-FastAPI
 ## IIIT Delhi Dashboard API
 
+### Next task: dockerise this API 
+
+Pre-requisite: should have python libraries used in code installed in the system globally 
+
 Note: Model used is a test model similar to actual one used in research
 
 How to Run:
