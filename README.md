@@ -2,7 +2,7 @@
 ## IIIT Delhi Dashboard API
 
 
-Pre-requisite: should have python libraries used in code installed in the system globally 
+Pre-requisite: should have python libraries used in code installed in the system's python environment
 
 Note: Model used is a test model similar to actual one used in research
 
