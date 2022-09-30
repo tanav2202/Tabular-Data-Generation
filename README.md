@@ -1,10 +1,9 @@
-# TBGAN-FastAPI
-## IIIT Delhi Dashboard API
+# Tabular Data Generation
 
 
 Pre-requisite: should have python libraries used in code installed in the system's python environment
 
-Note: Model used is a test model similar to actual one used in research
+Note: Model used is a test model similar to actual one used in research by me but not the same
 
 How to Run:
 1. Run app.py file 
