@@ -1,5 +1,6 @@
 # Tabular Data Generation
 
+Discord Server for discussions: https://discord.gg/42wGrHArJq
 
 Pre-requisite: should have python libraries used in code installed in the system's python environment
 
