@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', path='/app.css') }}>
+    <title>Tabular-data-generation</title>
+</head>
+
+<body>
+
+    <h1>Tabular Data Generation
+    </h1>
+    <h2>Upload the .csv file</h2>
+    <form action="/load_data" enctype="multipart/form-data" method="post">
+        <div class="input-file-container">
+            <input name="csv_file"  class="input-file" type="file">
+            <input type="submit" value="Submit" class="submit-button">
+        </div>
+        <p class="file-return"></p>
+    </form>
+</body>
+</html>
