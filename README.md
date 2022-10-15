@@ -6,9 +6,29 @@ Pre-requisite: should have python libraries used in code installed in the system
 
 Note: Model used is a test model similar to actual one used in research by me but not the same
 
-How to Run:
-1. Run app.py file 
-2. Visit http://127.0.0.1:5000/docs to see all the CRUD operations inside the API
+## How to Run:
+
+Clone the project
+
+```bash
+  git clone https://github.com/tanav2202/Tabular-Data-Generation
+```
+
+Go to the project directory
+
+```bash
+  cd Tabular-Data-Generation
+```
+
+Run the container and build command.
+
+```bash
+  docker compose up --build
+```
+
+## Local Demo : 
+
+1. Visit http://127.0.0.1:5000/docs to see all the CRUD operations inside the API
 3. Screen should look like this:
 ![image](https://user-images.githubusercontent.com/78900552/182476735-f190571b-8d0e-4762-8998-55f7d310ac89.png)
 
