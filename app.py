@@ -44,11 +44,11 @@ def root(csv_file: UploadFile = File(...)):
 @app.get('/train')
 def train():
     setup()
-    return RedirectResponse(url="/", status_code=303)
+    return RedirectResponse(url="/output", status_code=303)
 
 @app.get('/output')
 def download_file():
-    file_path = os.curdir + "/output/output.csv"
+    file_path = os.curdir + "output.csv"
     return FileResponse(path=file_path, filename='output.csv')
 
 
