@@ -5,21 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href={{ url_for('static', path='/app.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', path='/app.css' ) }}>
     <title>Tabular-data-generation</title>
 </head>
 
 <body>
-
-    <h1>Tabular Data Generation
-    </h1>
-    <h2>Upload the .csv file</h2>
-    <form action="/load_data" enctype="multipart/form-data" method="post">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form action="/load_data" enctype="multipart/form-data" method="post" class="form">
+        <h1>Tabular Data Generation</h1>
+        <h2>Upload the .csv file</h2>
         <div class="input-file-container">
-            <input name="csv_file"  class="input-file" type="file">
-            <input type="submit" value="Submit" class="submit-button">
+            <input name="csv_file" class="file-input" type="file">
+            <span class='button'>Choose</span>
+            <span class='label' data-js-label>No file selected</label>
         </div>
+        <button type="submit" class="btn">Generate</button>
         <p class="file-return"></p>
     </form>
+    <button class="btn">Download output file</button>
+    <button class="btn">Delete the pre-existing file</button>
+    
+
 </body>
+<script>
+
+    var inputs = document.querySelectorAll('.input-file-container')
+
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        customInput(inputs[i])
+    }
+
+    function customInput(el) {
+        const fileInput = el.querySelector('[type="file"]')
+        const label = el.querySelector('[data-js-label]')
+
+        fileInput.onchange =
+            fileInput.onmouseout = function () {
+                if (!fileInput.value) return
+
+                var value = fileInput.value.replace(/^.*[\\\/]/, '')
+                el.className += ' -chosen'
+                label.innerText = value
+            }
+    }
+
+</script>
+
 </html>
