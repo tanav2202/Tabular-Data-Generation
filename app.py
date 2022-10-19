@@ -48,7 +48,7 @@ def train():
 
 @app.get('/output')
 def download_file():
-    file_path = os.curdir + "output.csv"
+    file_path = os.curdir + "/output.csv"
     return FileResponse(path=file_path, filename='output.csv')
 
 
