@@ -25,8 +25,9 @@
         <button type="submit" class="btn">Generate</button>
         <p class="file-return"></p>
     </form>
-    <button class="btn">Download output file</button>
-    <button class="btn">Delete the pre-existing file</button>
+    <!-- download the file when loading is completed -->
+
+    <button class="btn-del">Delete the pre-existing file</button>
     
 
 </body>
@@ -51,6 +52,21 @@
                 label.innerText = value
             }
     }
+
+    // delete the pre-existing file
+    const btn = document.querySelector('.btn-del')
+    btn.addEventListener('click', () => {
+        fetch('/del', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                'file_name': 'input.csv'
+            })
+        })
+    })
+
 
 </script>
 
