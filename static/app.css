@@ -195,3 +195,16 @@ margin-left: 25px;
 .social i{
 margin-right: 4px;
 }
+
+.btn-delete{
+  margin-top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
