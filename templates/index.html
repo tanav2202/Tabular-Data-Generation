@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href={{ url_for('static', path='/app.css' ) }}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', path='/app.css' ) }}>    
     <title>Tabular-data-generation</title>
 </head>
 
@@ -14,21 +14,22 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form action="/load_data" enctype="multipart/form-data" method="post" class="form">
-        <h1>Tabular Data Generation</h1>
-        <h2>Upload the .csv file</h2>
-        <div class="input-file-container">
-            <input name="csv_file" class="file-input" type="file">
-            <span class='button'>Choose</span>
-            <span class='label' data-js-label>No file selected</label>
-        </div>
-        <button type="submit" class="btn">Generate</button>
-        <p class="file-return"></p>
-    </form>
-    <!-- download the file when loading is completed -->
+    <div class="form">
 
-    <button class="btn-del">Delete the pre-existing file</button>
-    
+        <form action="/load_data" enctype="multipart/form-data" method="post">
+            <h1>Tabular Data Generation</h1>
+            <h2>Upload the .csv file</h2>
+            <div class="input-file-container">
+                <input name="csv_file" class="file-input" type="file">
+                <span class='button'>Choose</span>
+                <span class='label' data-js-label>No file selected</label>
+            </div>
+            <button type="submit" class="btn">Generate</button>
+            <p class="file-return"></p>
+        </form>
+        <button class="btn">Delete the pre-existing file</button>
+    </div>
+
 
 </body>
 <script>
@@ -65,9 +66,6 @@
                 'file_name': 'input.csv'
             })
         })
-    })
-
-
+    });
 </script>
-
 </html>
