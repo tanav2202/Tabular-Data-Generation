@@ -1,7 +1,5 @@
 # Tabular Data Generation
 
-Discord Server for discussions: https://discord.gg/42wGrHArJq
-
 Pre-requisite: should have python libraries used in code installed in the system's python environment
 
 Note: Model used is a test model similar to actual one used in research by me but not the same
@@ -26,7 +24,7 @@ Run the container and build command.
   docker compose up --build
 ```
 
-## Local Demo : 
+## Local Demo (of Backend System) : 
 
 1. Visit http://127.0.0.1:5000/docs to see all the CRUD operations inside the API
 3. Screen should look like this:
